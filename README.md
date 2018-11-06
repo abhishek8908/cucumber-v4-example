@@ -4,7 +4,8 @@ Version 4.0 introduces some excellent features:
 
 1. With introduction to version 3 dynamic type casting was not supported.
    This feature is back in version 4.0 release.
-   see example (code)
+   see example (code).Just include the TypeRegistryConfiguration.java in your glue path.
+   
 2. Cucumber version 4 now supports parallel execution , therefore you don't need to depend upon cucumber-parallel-plugin
     to run your testcases in parallel. see example (code)
     
