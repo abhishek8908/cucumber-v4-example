@@ -51,28 +51,37 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.22.0</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+
+                <configuration>
+                    <properties>
+                        <property>
+                            <name>parallel</name>
+                            <value>classes</value>
+                        </property>
+                        <property>
+                        <name>threadCount</name>
+                        <value>1</value>
+                        </property>
+                        <property>
+                            <name>dataproviderthreadcount</name>
+                            <value>5</value>
+                        </property>
+                    </properties>
+                    <testSourceDirectory>src/test/java/hook</testSourceDirectory>
+
+
+                </configuration>
+
                 <executions>
                     <execution>
                         <id>acceptance-test</id>
                         <phase>integration-test</phase>
                         <goals>
                             <!--<goal>integration-test</goal>-->
-                            <goal>integration-test</goal>
+                            <goal>test</goal>
                         </goals>
-
-                        <configuration>
-
-                            <threadCount>1</threadCount>
-                            <includes>
-                                <include>**/*Runner.java</include>
-                            </includes>
-                            <!--<parallel>classes</parallel>-->
-                            <testSourceDirectory>src/test/java/hook</testSourceDirectory>
-
-
-                        </configuration>
 
                     </execution>
                 </executions>
