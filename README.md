@@ -3,7 +3,7 @@
 Version 4.0 introduces some excellent features:
 
 ```
-1. With introduction to version 3 dynamic type casting was not supported.
+1. With introduction to version 3 dynamic type caste captured String to desired type was not supported.
    This feature is back in version 4.0 release.
    see example (code).Just include the TypeRegistryConfiguration.java in your glue path.
    
